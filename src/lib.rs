@@ -480,6 +480,7 @@ impl Default for Context {
 }
 
 /// A socket, the central object in 0MQ.
+#[derive(Clone)]
 pub struct Socket {
     sock: *mut c_void,
     // The `context` field is never accessed, but implicitly does
